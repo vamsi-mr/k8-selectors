@@ -10,7 +10,8 @@ spec:
         - matchExpressions:
           - Key: hardware
             operator: NotIn
-            values: gpu
+            values: 
+            - gpu
   containers:
   - name: with-node-anti-affinity
     image: nginx
