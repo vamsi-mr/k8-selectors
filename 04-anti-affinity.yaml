@@ -8,7 +8,7 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - Key: hardware
+          - key: hardware
             operator: NotIn
             values: 
             - gpu
