@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-node-anti-affinity
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoreDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - Key: hardware
+            operator: NotIn
+            values: gpu
+  containers:
+  - name: with-node-anti-affinity
+    image: nginx
